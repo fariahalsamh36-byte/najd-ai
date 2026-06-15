@@ -5,9 +5,9 @@ import { Menu, X } from "lucide-react"
 import { Logo } from "./logo"
 
 const navLinks = [
-  { label: "المميزات", href: "#features" },
-  { label: "من نحن", href: "#about" },
-  { label: "تواصل معنا", href: "#contact" },
+  { label: "المميزات", href: "/features" },
+  { label: "من نحن", href: "/#about" },
+  { label: "تواصل معنا", href: "/#contact" },
 ]
 
 export function SiteHeader() {
@@ -17,7 +17,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-full border border-white/40 bg-white/30 px-5 py-3 shadow-lg backdrop-blur-md md:px-7">
         {/* Logo */}
-        <a href="#home" className="flex items-center" aria-label="نجد - الصفحة الرئيسية">
+        <a href="/" className="flex items-center" aria-label="نجد - الصفحة الرئيسية">
           <Logo className="h-7 w-auto text-primary" />
         </a>
 
@@ -36,7 +36,7 @@ export function SiteHeader() {
 
         {/* Login button */}
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-md transition-transform hover:scale-105 md:inline-block"
         >
           تسجيل الدخول
@@ -69,7 +69,7 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-1 rounded-xl bg-primary px-4 py-3 text-center text-sm font-bold text-primary-foreground"
             >

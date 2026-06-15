@@ -72,16 +72,18 @@ export function ShowcaseSection() {
           {/* Ambient green glow layers */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-16 -z-10 rounded-[40%] blur-3xl"
+            className="pointer-events-none absolute -inset-x-32 -inset-y-40 -z-10 blur-3xl"
             style={{
-              background: "radial-gradient(60% 60% at 50% 45%, rgba(223, 247, 227, 0.55) 0%, rgba(223, 247, 227, 0) 70%)",
+              background:
+                "radial-gradient(closest-side at 50% 50%, rgba(167, 230, 182, 0.85) 0%, rgba(199, 240, 210, 0.55) 45%, rgba(223, 247, 227, 0) 80%)",
             }}
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-8 -z-10 rounded-[40%] blur-2xl"
+            className="pointer-events-none absolute -inset-x-20 -inset-y-24 -z-10 blur-3xl"
             style={{
-              background: "radial-gradient(55% 55% at 50% 50%, rgba(223, 247, 227, 0.7) 0%, rgba(223, 247, 227, 0) 65%)",
+              background:
+                "radial-gradient(closest-side at 50% 50%, rgba(184, 236, 197, 0.95) 0%, rgba(223, 247, 227, 0) 75%)",
             }}
           />
           <div className="relative grid grid-cols-2 gap-4">

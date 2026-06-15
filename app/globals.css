@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 300 11% 94%;
+    --foreground: 150 28% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 28% 18%;
+
+    --muted: 300 8% 90%;
+    --muted-foreground: 220 9% 42%;
+
+    --border: 300 10% 87%;
+
+    --primary: 150 34% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 89 58% 55%;
+    --accent-foreground: 150 40% 14%;
+
+    --lime: 89 62% 56%;
+    --purple: 258 86% 66%;
+
+    --radius: 1.25rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    background-color: hsl(var(--background));
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes floatYSubtle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-float {
+    animation: floatY 4.5s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-float-subtle {
+    animation: floatYSubtle 6s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-subtle {
+    animation: none;
+  }
+}

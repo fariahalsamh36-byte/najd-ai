@@ -72,7 +72,7 @@ export function ShowcaseSection() {
           {/* Ambient green glow layers */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-32 -inset-y-40 -z-10 blur-3xl"
+            className="pointer-events-none absolute -inset-x-32 -inset-y-40 z-0 blur-3xl"
             style={{
               background:
                 "radial-gradient(closest-side at 50% 50%, rgba(167, 230, 182, 0.85) 0%, rgba(199, 240, 210, 0.55) 45%, rgba(223, 247, 227, 0) 80%)",
@@ -80,13 +80,13 @@ export function ShowcaseSection() {
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-20 -inset-y-24 -z-10 blur-3xl"
+            className="pointer-events-none absolute -inset-x-20 -inset-y-24 z-0 blur-3xl"
             style={{
               background:
                 "radial-gradient(closest-side at 50% 50%, rgba(184, 236, 197, 0.95) 0%, rgba(223, 247, 227, 0) 75%)",
             }}
           />
-          <div className="relative grid grid-cols-2 gap-4">
+          <div className="relative z-10 grid grid-cols-2 gap-4">
             <StatusCard
               icon={<Presentation className="h-5 w-5 text-white" />}
               iconBg="bg-orange-500"
@@ -127,7 +127,7 @@ export function ShowcaseSection() {
 
           {/* Chat card */}
           <div
-            className="animate-float-subtle mt-4 overflow-hidden rounded-2xl bg-card shadow-xl"
+            className="animate-float-subtle relative z-10 mt-4 overflow-hidden rounded-2xl bg-card shadow-xl"
             style={{ animationDelay: "0.9s" }}
           >
             <div className="flex items-center justify-between gap-3 bg-gradient-to-l from-violet-600 to-violet-500 px-5 py-4">

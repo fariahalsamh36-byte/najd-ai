@@ -7,11 +7,15 @@ type StatusCardProps = {
   lines: string[]
   badge: string
   badgeClass: string
+  delay?: string
 }
 
-function StatusCard({ icon, iconBg, title, lines, badge, badgeClass }: StatusCardProps) {
+function StatusCard({ icon, iconBg, title, lines, badge, badgeClass, delay }: StatusCardProps) {
   return (
-    <div className="rounded-2xl bg-card p-4 shadow-xl">
+    <div
+      className="animate-float rounded-2xl bg-card p-4 shadow-xl"
+      style={delay ? { animationDelay: delay } : undefined}
+    >
       <div className="flex items-start justify-between gap-3">
         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${iconBg}`}>{icon}</div>
         <div className="text-right">
@@ -73,6 +77,7 @@ export function ShowcaseSection() {
               lines={["الطاقة المتجددة", "15 شريحة"]}
               badge="تم انشاء"
               badgeClass="bg-orange-100 text-orange-600"
+              delay="0s"
             />
             <StatusCard
               icon={<ClipboardList className="h-5 w-5 text-white" />}
@@ -81,6 +86,7 @@ export function ShowcaseSection() {
               lines={["10 أسئلة متنوعة"]}
               badge="جاهز"
               badgeClass="bg-violet-100 text-violet-600"
+              delay="0.6s"
             />
             <StatusCard
               icon={<FileText className="h-5 w-5 text-white" />}
@@ -89,6 +95,7 @@ export function ShowcaseSection() {
               lines={["رياضيات -", "الكسر العشري"]}
               badge="تم الإنشاء"
               badgeClass="bg-green-100 text-green-700"
+              delay="1.2s"
             />
             <StatusCard
               icon={<Puzzle className="h-5 w-5 text-white" />}
@@ -97,11 +104,15 @@ export function ShowcaseSection() {
               lines={["مطابقة"]}
               badge="جاهز"
               badgeClass="bg-pink-100 text-pink-600"
+              delay="1.8s"
             />
           </div>
 
           {/* Chat card */}
-          <div className="mt-4 overflow-hidden rounded-2xl bg-card shadow-xl">
+          <div
+            className="animate-float-subtle mt-4 overflow-hidden rounded-2xl bg-card shadow-xl"
+            style={{ animationDelay: "0.9s" }}
+          >
             <div className="flex items-center justify-between gap-3 bg-gradient-to-l from-violet-600 to-violet-500 px-5 py-4">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/20">
                 <Sparkles className="h-5 w-5 text-white" />

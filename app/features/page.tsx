@@ -17,6 +17,7 @@ export default function FeaturesPage() {
       <SiteHeader />
       <main>
         <HeroSection
+          variant="panel"
           titleTop="كل احتياجات التعليم"
           titleBottom="في مــنـصـــة واحــــدة"
           accentBottom

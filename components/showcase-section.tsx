@@ -68,8 +68,23 @@ export function ShowcaseSection() {
         </div>
 
         {/* Cards composition */}
-        <div className="order-2 lg:order-1">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="relative order-2 lg:order-1">
+          {/* Ambient green glow layers */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-16 -z-10 rounded-[40%] blur-3xl"
+            style={{
+              background: "radial-gradient(60% 60% at 50% 45%, rgba(223, 247, 227, 0.55) 0%, rgba(223, 247, 227, 0) 70%)",
+            }}
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-8 -z-10 rounded-[40%] blur-2xl"
+            style={{
+              background: "radial-gradient(55% 55% at 50% 50%, rgba(223, 247, 227, 0.7) 0%, rgba(223, 247, 227, 0) 65%)",
+            }}
+          />
+          <div className="relative grid grid-cols-2 gap-4">
             <StatusCard
               icon={<Presentation className="h-5 w-5 text-white" />}
               iconBg="bg-orange-500"

@@ -1,5 +1,4 @@
 import { Instagram, Linkedin, Mail } from "lucide-react"
-import { Logo } from "./logo"
 
 const footerCols = [
   {
@@ -35,11 +34,13 @@ export function SiteFooter() {
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-6xl px-6 pb-10 pt-6">
           <div className="grid gap-10 text-right md:grid-cols-4">
-            {/* Logo + tagline */}
-            <div className="md:order-4">
-              <Logo className="text-primary-foreground" />
-              <p className="mt-2 text-xs text-primary-foreground/70">AI Educational Assistant</p>
-              <p className="text-xs text-primary-foreground/70">Estd 2026</p>
+            {/* Logo */}
+            <div className="flex justify-center md:order-4 md:justify-start">
+              <img
+                src="/najd-ai-logo.png"
+                alt="نجد AI"
+                className="h-12 w-auto object-contain md:h-14"
+              />
             </div>
 
             {/* Link columns */}

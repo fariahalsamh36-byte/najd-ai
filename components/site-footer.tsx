@@ -39,7 +39,7 @@ export function SiteFooter() {
               <img
                 src="/najd-ai-logo.png"
                 alt="نجد AI"
-                className="h-12 w-auto object-contain md:h-14"
+                className="h-[72px] w-auto object-contain md:h-[84px]"
               />
             </div>
 

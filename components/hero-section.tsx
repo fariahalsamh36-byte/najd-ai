@@ -21,18 +21,20 @@ export function HeroSection({
           alt="معلم سعودي يساعد طلابه داخل الفصل الدراسي"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-primary/40 to-primary/90" />
+        {/* Dark green panel on the left fading into the photo on the right */}
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-primary/85 to-primary" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative mx-auto flex min-h-[640px] max-w-5xl flex-col items-center justify-center px-6 pb-28 pt-40 text-center md:min-h-[760px] md:pt-44">
-        <div className="w-full max-w-3xl rounded-[2rem] border border-white/40 bg-white/25 p-8 shadow-2xl backdrop-blur-md md:p-14">
-          <h1 className="text-balance text-4xl font-black leading-tight text-primary md:text-6xl">
+      {/* Content — anchored to the start (right in RTL) inside the green area */}
+      <div className="relative mx-auto flex min-h-[560px] max-w-7xl flex-col items-end justify-center px-6 pb-28 pt-32 text-right md:min-h-[680px] md:px-12 md:pt-36 lg:px-16">
+        <div className="max-w-md">
+          <h1 className="text-balance text-3xl font-black leading-tight text-primary-foreground md:text-[2.75rem] lg:text-5xl">
             {titleTop}
             <br />
-            <span className={accentBottom ? "text-lime" : undefined}>{titleBottom}</span>
+            <span className={accentBottom ? "text-lime" : "text-lime"}>{titleBottom}</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-pretty text-base font-medium leading-relaxed text-primary/90 md:text-lg">
+          <p className="mt-5 max-w-sm text-pretty text-sm font-medium leading-relaxed text-primary-foreground/90 md:text-base">
             {subtitle}
           </p>
         </div>
